@@ -165,9 +165,9 @@ func Execute(cmd *cobra.Command, args []string) {
 		ValidatorHandler(w, r, grpcConn)
 	})
 
-	http.HandleFunc("/metrics/validators", func(w http.ResponseWriter, r *http.Request) {
-		ValidatorsHandler(w, r, grpcConn)
-	})
+//	http.HandleFunc("/metrics/validators", func(w http.ResponseWriter, r *http.Request) {
+//		ValidatorsHandler(w, r, grpcConn)
+//	})
 
 	http.HandleFunc("/metrics/params", func(w http.ResponseWriter, r *http.Request) {
 		ParamsHandler(w, r, grpcConn)
